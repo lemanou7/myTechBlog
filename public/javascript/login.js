@@ -1,6 +1,6 @@
 async function loginFormHandler(event) {
     event.preventDefault();
-  
+  console.log('clicked')
     const email = document.querySelector('#email-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
   
@@ -15,11 +15,11 @@ async function loginFormHandler(event) {
       });
   
       if (response.ok) {
-        document.location.replace('/dashboard');
+        document.location.replace('/profile');
       } else {
         alert(response.statusText);
       }
     }
   }
 
-  document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
+  document.querySelector('#login-btn').addEventListener('submit', loginFormHandler);

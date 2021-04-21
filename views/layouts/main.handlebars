@@ -18,20 +18,66 @@
 
 
   <div class="wrapper">
-    <header>
-      <h1 class="has-text-black px-3 py-3 has-text-weight-bold">The tech blog</h1>
-      <nav class="navbar mt-2">
-        {{#if loggedIn}}
-        <a href="/" class="navbar-item is-hoverable pt-1">homepage</a>
-        <a href="/dashboard" class="navbar-item is-hoverable pt-1">dashboard</a>
-        <a href="/dashboard/create/" class="navbar-item is-hoverable pt-1 mr-4">create post</a>
-        <button id="logout" class="button is-danger">logout</button>
-        {{else}}
-        <a href="/" class="navbar-item is-hoverable pt-1">homepage</a>
-        <a href="/login" class="button is-primary">login</a>
-        {{/if}}
+    <h1>The tech blog</h1>
+
+    {{!-- <header>
+      <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand">The tech blog</a>
+          {{#if loggedIn}}
+          <a href="/" class="navbar-item  pt-1">home</a>
+          <a href="/dashboard" class="navbar-item  pt-1">profile</a>
+          <a href="/dashboard/create/" class="navbar-item  pt-1 mr-4">create post</a>
+          <button id="logout" class="btn btn-danger">logout</button>
+          {{else}}
+          <a href="/" class="navbar-item  pt-1">home</a>
+          <a href="/login" class="btn btn-primary">login</a>
+          {{/if}}
+        </div>
+      </nav> --}}
+
+
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Home</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              {{#if loggedIn}}
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/profile/">profile</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="/profile/create/">create post</a>
+              </li>
+
+              <li>
+                <button id="logout" class="btn btn-danger">logout</button>
+              </li>
+              {{else}}
+            
+              <li>
+                <a href="/login" class="btn btn-primary">login</a>
+              </li>
+
+              {{/if}}
+            </ul>
+            
+          </div>
+        </div>
       </nav>
+
+
+
     </header>
+    
 
     <main>
 
@@ -53,10 +99,10 @@
 
       <div class="row-is-full content has-text-centered">
         <p>
-          <strong>technically speaking</strong> by <a href="https://github.com/priyaravi23">Priya Ravi</a> | made with
-          <a href="https://bulma.io/">bulma</a> | source code:
-          <a href="https://github.com/priyaravi23/mvc-tech-blog"><i class="fab fa-github"></i></a> |
-          <a href="mailto:priyaravi23@gmail.com"><i class="far fa-envelope"></i></a>
+          <strong>Powered</strong> by <a href="https://github.com/lemanou7">Drissa Bagate</a> | Developed using
+          <a href="https://bulma.io/">Bootstrap</a> | Project Link:
+          <a href="https://github.com/lemanou7/myTechBlog"><i class="fab fa-github"></i></a> |
+          <a href="mailto:lemanou7@yahoo.fr"><i class="far fa-envelope"></i></a>
         </p>
       </div>
     </footer>
